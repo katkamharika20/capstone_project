@@ -3,109 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Pipeline</title>
+    <title>DevOps Hub</title>
     <style>
-        body {
-            margin: 0;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
         }
 
-        header {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 30px;
+        body{
+            background:#f5f7fa;
+            color:#333;
+            line-height:1.6;
         }
 
-        nav {
-            background-color: #444;
-            text-align: center;
-            padding: 10px;
+        header{
+            background:#1e293b;
+            color:white;
+            text-align:center;
+            padding:60px 20px;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-            font-weight: bold;
+        header h1{
+            font-size:3rem;
+            margin-bottom:10px;
         }
 
-        .hero {
-            text-align: center;
-            padding: 50px;
-            background-color: #0078D7;
-            color: white;
+        header p{
+            font-size:1.2rem;
         }
 
-        .container {
-            padding: 30px;
+        .container{
+            width:80%;
+            margin:auto;
+            padding:40px 0;
         }
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+        .section-title{
+            text-align:center;
+            margin-bottom:30px;
+            color:#1e293b;
         }
 
-        footer {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
+        .cards{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            flex:1;
+            min-width:250px;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        .card h3{
+            color:#2563eb;
+            margin-bottom:10px;
+        }
+
+        .benefits{
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .benefits ul{
+            margin-left:20px;
+        }
+
+        footer{
+            background:#1e293b;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>DevOps CI/CD Pipeline</h1>
-    <p>Automating Software Development and Deployment</p>
-</header>
+    <header>
+        <h1>DevOps Hub</h1>
+        <p>Bridging Development and Operations for Faster, Reliable Software Delivery</p>
+    </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Tools</a>
-    <a href="#">Pipeline</a>
-    <a href="#">Contact</a>
-</nav>
+    <div class="container">
 
-<section class="hero">
-    <h2>Welcome to DevOps World</h2>
-    <p>Learn how DevOps helps teams build, test, and deploy applications faster.</p>
-</section>
+        <h2 class="section-title">What is DevOps?</h2>
+        <div class="benefits">
+            <p>
+                DevOps is a culture and set of practices that combines software development
+                and IT operations. Its goal is to shorten the software development lifecycle,
+                improve collaboration, and deliver high-quality applications efficiently.
+            </p>
+        </div>
 
-<div class="container">
+        <br><br>
 
-    <div class="card">
-        <h3>Version Control - Git & GitHub</h3>
-        <p>Developers store and manage source code using Git and GitHub repositories.</p>
+        <h2 class="section-title">Core Principles of DevOps</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Collaboration</h3>
+                <p>
+                    Encourages developers and operations teams to work together,
+                    improving communication and productivity.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Automation</h3>
+                <p>
+                    Reduces manual work by automating repetitive tasks,
+                    increasing efficiency and reliability.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Continuous Improvement</h3>
+                <p>
+                    Focuses on frequent updates, monitoring, feedback,
+                    and process optimization.
+                </p>
+            </div>
+
+        </div>
+
+        <br><br>
+
+        <h2 class="section-title">Benefits of DevOps</h2>
+
+        <div class="benefits">
+            <ul>
+                <li>Faster software delivery</li>
+                <li>Improved team collaboration</li>
+                <li>Higher deployment success rates</li>
+                <li>Better system reliability and stability</li>
+                <li>Enhanced customer satisfaction</li>
+                <li>Rapid response to business needs</li>
+            </ul>
+        </div>
+
     </div>
 
-    <div class="card">
-        <h3>Continuous Integration - Jenkins</h3>
-        <p>Jenkins automatically builds and tests code whenever changes are pushed to GitHub.</p>
-    </div>
-
-    <div class="card">
-        <h3>Containerization - Docker</h3>
-        <p>Docker packages applications and their dependencies into portable containers.</p>
-    </div>
-
-    <div class="card">
-        <h3>Continuous Deployment</h3>
-        <p>Applications are automatically deployed to servers after successful testing.</p>
-    </div>
-
-</div>
-
-<footer>
-    <p>DevOps Project | GitHub → Jenkins → Docker → Deployment</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 DevOps Hub | Empowering Modern Software Development</p>
+    </footer>
 
 </body>
 </html>
-
