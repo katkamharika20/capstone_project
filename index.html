@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevOps Hub</title>
+
     <style>
         *{
             margin:0;
@@ -79,8 +80,32 @@
             box-shadow:0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .benefits ul{
-            margin-left:20px;
+        .button-section{
+            text-align:center;
+            margin-top:40px;
+        }
+
+        button{
+            padding:12px 20px;
+            margin:10px;
+            border:none;
+            border-radius:5px;
+            background:#2563eb;
+            color:white;
+            cursor:pointer;
+            font-size:16px;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#1d4ed8;
+        }
+
+        #output{
+            margin-top:20px;
+            font-size:18px;
+            font-weight:bold;
+            color:#1e293b;
         }
 
         footer{
@@ -92,6 +117,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -102,11 +128,12 @@
     <div class="container">
 
         <h2 class="section-title">What is DevOps?</h2>
+
         <div class="benefits">
             <p>
-                DevOps is a culture and set of practices that combines software development
-                and IT operations. Its goal is to shorten the software development lifecycle,
-                improve collaboration, and deliver high-quality applications efficiently.
+                DevOps is a modern approach that combines software development and
+                IT operations. It promotes collaboration, automation, and continuous
+                improvement to deliver software faster and more reliably.
             </p>
         </div>
 
@@ -119,24 +146,24 @@
             <div class="card">
                 <h3>Collaboration</h3>
                 <p>
-                    Encourages developers and operations teams to work together,
-                    improving communication and productivity.
+                    Encourages teams to work together, improving communication
+                    and productivity throughout the software lifecycle.
                 </p>
             </div>
 
             <div class="card">
                 <h3>Automation</h3>
                 <p>
-                    Reduces manual work by automating repetitive tasks,
-                    increasing efficiency and reliability.
+                    Automates repetitive tasks, reducing human error and
+                    increasing efficiency.
                 </p>
             </div>
 
             <div class="card">
                 <h3>Continuous Improvement</h3>
                 <p>
-                    Focuses on frequent updates, monitoring, feedback,
-                    and process optimization.
+                    Supports frequent feedback, monitoring, and optimization
+                    of systems and processes.
                 </p>
             </div>
 
@@ -151,10 +178,32 @@
                 <li>Faster software delivery</li>
                 <li>Improved team collaboration</li>
                 <li>Higher deployment success rates</li>
-                <li>Better system reliability and stability</li>
+                <li>Better reliability and stability</li>
                 <li>Enhanced customer satisfaction</li>
-                <li>Rapid response to business needs</li>
+                <li>Quick adaptation to business needs</li>
             </ul>
+        </div>
+
+        <div class="button-section">
+
+            <h2 class="section-title">Learn More About DevOps</h2>
+
+            <button onclick="showInfo('culture')">
+                DevOps Culture
+            </button>
+
+            <button onclick="showInfo('automation')">
+                Automation
+            </button>
+
+            <button onclick="showInfo('monitoring')">
+                Monitoring
+            </button>
+
+            <p id="output">
+                Click a button to learn more about DevOps.
+            </p>
+
         </div>
 
     </div>
@@ -162,6 +211,25 @@
     <footer>
         <p>&copy; 2026 DevOps Hub | Empowering Modern Software Development</p>
     </footer>
+
+    <script>
+        function showInfo(topic){
+
+            let message = "";
+
+            if(topic === "culture"){
+                message = "DevOps Culture promotes teamwork, shared responsibility, and strong communication between all stakeholders.";
+            }
+            else if(topic === "automation"){
+                message = "Automation helps streamline workflows, reduce errors, and increase the speed of software delivery.";
+            }
+            else if(topic === "monitoring"){
+                message = "Monitoring enables teams to track application performance, identify issues quickly, and improve reliability.";
+            }
+
+            document.getElementById("output").innerHTML = message;
+        }
+    </script>
 
 </body>
 </html>
